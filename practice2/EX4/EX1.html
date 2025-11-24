@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Clamp with Media Query</title>
+		<style>
+            body{
+                width: 100%;
+                height: 100vh;
+                padding: 0;
+                margin: 0;
+            }
+            .wrapper {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .content {
+                display: flex;
+            }
+            
+			.small {
+				display: none; 
+			}
+
+			.big {
+				display: inline; 
+				font-size: 80px;
+				color: green;
+                background: rgb(60, 206, 255);
+			}
+
+
+			@media  (max-width: 600px) {
+				.small {
+					display: inline; 
+					font-size: 40px; 
+					color: red;
+                     background: rgb(60, 255, 92);
+				}
+
+				.big {
+					display: none;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="content">
+				<span class="small">I'm SMALL 😊</span>
+				<span class="big">I'm BIG 🔔</span>
+			</div>
+		</div>
+	</body>
+</html>

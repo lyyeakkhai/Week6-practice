@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>exercise1</title>
+		<style>
+			.item-container {
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				gap: 10px;
+			}
+			.item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+				padding: 20px 0;
+				background: rgb(114, 114, 255);
+			}
+
+            @media (max-width: 1000px) {
+                .item-container{
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+             @media (max-width: 768px) {
+                .item-container{
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+             @media (max-width: 480px) {
+                .item-container{
+                    grid-template-columns: 1fr;
+                }
+            }
+		</style>
+	</head>
+	<body>
+		<div class="item-container">
+			<div class="item">1</div>
+			<div class="item">2</div>
+			<div class="item">3</div>
+			<div class="item">4</div>
+			<div class="item">5</div>
+			<div class="item">6</div>
+			<div class="item">7</div>
+			<div class="item">8</div>
+		</div>
+	</body>
+</html>

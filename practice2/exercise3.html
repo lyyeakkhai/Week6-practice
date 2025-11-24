@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>exercise3</title>
+		<style>
+			.container {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				gap: 10px;
+			}
+			main {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+			}
+
+			.mainLeft,
+			.sidebar,
+			nav,
+			footer {
+				padding: 20px 20px;
+				background: rgb(198, 137, 255);
+			}
+			.mainLeft,
+			.sidebar {
+				padding: 20px 20px;
+				background: rgb(66, 135, 233);
+				color: white;
+			}
+
+			
+			@media (min-width: 600px) {
+				main {
+					flex-direction: row;
+				}
+				.mainLeft,
+				.sidebar {
+					flex: 1;
+				}
+			}
+            @media (min-width: 900px) {
+				main {
+					flex-direction: row;
+				}
+				.mainLeft {
+					flex: 2;
+				}
+				.sidebar {
+					flex: 1;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<nav><p>responsive header</p></nav>
+			<main>
+				<div class="mainLeft">
+					<p>main content</p>
+				</div>
+				<div class="sidebar">
+					<p>side bar</p>
+				</div>
+			</main>
+			<footer>
+				<p>footer</p>
+			</footer>
+		</div>
+	</body>
+</html>
